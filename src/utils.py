@@ -291,7 +291,7 @@ def log_experiment(net_final, epochs_list, train_accs, val_accs, train_losses, v
         # Setting tick labels
         ax.set_xticklabels(label_names)
         ax.set_yticklabels(label_names)
-        plt.xticks(rotation=45)  # Optional: rotate for better display if needed
+        plt.xticks(rotation=45)
         plt.yticks(rotation=45)
         plt.savefig("confusion_matrix.png")
         plt.close()
@@ -554,7 +554,7 @@ def evaluate_model(test_loader, net_final, device, num_viz=10, eval_batchsize=32
 
     # Calculate confusion matrix
     cm = confusion_matrix(all_targets, all_predictions)
-    class_names = ['Benign', 'Malignant']  # Class names as per your setup
+    class_names = ['Benign', 'Malignant']
 
     # Plotting the confusion matrix
     plt.figure(figsize=(8, 6))
@@ -609,7 +609,7 @@ def evaluate_model(test_loader, net_final, device, num_viz=10, eval_batchsize=32
 
     # Calculate confusion matrix
     cm = confusion_matrix(all_targets, predictions)
-    class_names = ['Benign', 'Malignant']  # Class names as per your setup
+    class_names = ['Benign', 'Malignant']
 
     # Plotting the confusion matrix
     plt.figure(figsize=(8, 6))

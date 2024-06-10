@@ -63,4 +63,4 @@ def get_resnet_model(model_load, num_classes=2, freeze_backbone=False, own_model
 
     net = nn.Sequential(backbone, classifier)  # Combine the backbone and classifier
 
-    return net  # Return the complete model
+    return net
